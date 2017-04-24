@@ -10,8 +10,9 @@ Demo::Application.routes.draw do
 
   get "store/index"
 
-  resources :products
-
+  resources :products do
+    get :who_bought, on: :member
+  end
 
   get "say/hello"
 
